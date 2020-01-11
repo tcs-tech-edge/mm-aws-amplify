@@ -22,5 +22,20 @@
 			]
 		}
 	},
-	"api": {}
+	"api": {
+		"investment": {
+			"service": "API Gateway",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [
+				{
+					"category": "function",
+					"resourceName": "investmentLambda",
+					"attributes": [
+						"Name",
+						"Arn"
+					]
+				}
+			]
+		}
+	}
 }

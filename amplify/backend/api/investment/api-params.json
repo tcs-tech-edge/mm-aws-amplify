@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/portfolio",
+            "lambdaFunction": "investmentLambda",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "investment",
+    "apiName": "investment",
+    "functionArns": [
+        {
+            "lambdaFunction": "investmentLambda"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-mm-investment-prod-172218-authRole",
+        "unAuthRoleName": "amplify-mm-investment-prod-172218-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "investmentLambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
